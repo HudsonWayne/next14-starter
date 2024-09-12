@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 const Links = () => {
@@ -21,7 +22,11 @@ const Links = () => {
 
     ];
   return (
-    <div>Links</div>
+    <div>
+        {Links.map((links=>(
+            <Link href={links.path}key={}>{link.title}</Link>
+        )))}
+    </div>
   )
 }
 
